@@ -1,12 +1,23 @@
+@font-face {
+   font-family: Sullivan-Regular; 
+   src: url('../fonts/Sullivan/Sullivan-Regular.otf');
+} 
+@font-face {
+   font-family: Homestead-Regular; 
+   src: url('../fonts/Homestead/Homestead-Regular.ttf');
+} 
+
 body {
   padding-top: 70px;
   padding-bottom: 30px;
 }
 
-.theme-dropdown .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 20px;
+.theme-showcase p {
+  font-family: 'Homestead-Regular';
+}
+
+.theme-showcase h1 {
+  font-family: 'Sullivan-Regular';
 }
 
 .theme-showcase > p > .btn {
@@ -15,4 +26,35 @@ body {
 
 .theme-showcase .navbar .container {
   width: auto;
+}
+
+.theme-showcase #quote {
+  text-align: center;
+  color: blue;  
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.theme-showcase #experience-table {
+  clear: both
+  padding-left: 3%;
+  width: 100%;
+  font-family: 'Homestead-Regular';
+}
+
+.theme-showcase #experience-table td {
+    padding: 1%;
+    padding-right: 5%;
+}
+
+.theme-showcase #jpl img {
+	width: 110px;
+}
+
+.theme-showcase #carefusion img {
+	width: 150px;
+}
+
+td .content {
+	padding-right: 3%;
+	padding-top: 0%;
 }
