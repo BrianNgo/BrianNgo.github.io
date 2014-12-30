@@ -31,7 +31,6 @@ body {
 .theme-showcase #quote {
   text-align: center;
   color: blue;  
-  border-bottom: 1px solid #e5e5e5;
 }
 
 .theme-showcase #experience-table {
@@ -42,19 +41,52 @@ body {
 }
 
 .theme-showcase #experience-table td {
-    padding: 1%;
-    padding-right: 5%;
+  padding: 1%;
+  padding-right: 5%;
 }
 
 .theme-showcase #jpl img {
-	width: 110px;
+  width: 110px;
 }
 
 .theme-showcase #carefusion img {
-	width: 150px;
+  width: 150px;
+}
+
+.theme-showcase #resume {
+  padding-left: 100px;
+}
+
+.theme-showcase #resume-pic {
+  width: 320px;
+  height: 500px;
+  float: left;
+  padding-top: 0%
+}
+
+.theme-showcase #resume table{
+  padding-top: 2%;
+  padding-left: 200px;
+  padding-bottom: 10%;
+}
+
+.theme-showcase #linkedin img {
+  width: 300px;
+  padding-left: 30%;
+  padding-top: 30%
+}
+
+.theme-showcase #github img {
+  width: 300px;
+  padding-left: 30%;
+}
+
+.theme-showcase #email img {
+  padding-left: 100px;
+  padding-top: 10%
 }
 
 td .content {
-	padding-right: 3%;
-	padding-top: 0%;
+  padding-right: 3%;
+  padding-top: 0%;
 }

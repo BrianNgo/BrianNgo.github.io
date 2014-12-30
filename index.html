@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="res/theme.css" rel="stylesheet">
+    <link href="res/carousel.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -45,8 +46,7 @@
           <a class="navbar-brand" href="#">Brian Ngo</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+          <ul class="nav navbar-nav navbar-right">
             <li><a href="#about">About Me</a></li>
 	    <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -57,30 +57,77 @@
     </nav>
 
     <div class="container theme-showcase" role="main">
+      <!-- Carousel
+	   ================================================== -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption">
+		<h1>Example headline.</h1>
+		<p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+		<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+		<h1>Another example headline.</h1>
+		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption">
+		<h1>One more for good measure.</h1>
+		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+	</div>
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+	</a>
+      </div><!-- /.carousel -->
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div id="about" class="jumbotron">
+      <div id="about" class="page-header">
         <h1>About Me</h1>
-        <p>I am a graduating senior at California California State Polytechnic University, Pomona. My passion is programming and building software. Currently, I am a member of Carefusion's Software Engineering team working on building the next generation ventialors</p>
-	<div id="quote">
-	  <p>"I think that every computer science major, at some point, should learn how to program in C because it allows you to get close the machine and think at the system level"</p>
-	  </div>
+      </div>
+      <div id="about-content">
+        <p>I am a graduating senior at California California State Polytechnic University, Pomona. My passion is programming and building software. I am interested in variety of technical and creative projects including mobile device application, embedded systems, and robotic. Currently, I am a member of Carefusion's Software Engineering team working on building the next generation ventialors</p>
+	<p id="quote">"I think that every computer science major, at some point, should learn how to program in C because it allows you to get close the machine and think at the system level"</p>
       </div>
 
       <div id="experience" class="page-header">
         <h1>Experience</h1>
       </div>
-      <div id="experience-table">
+      <div id="experience-table" class="jumbotron">
 	<table>
 	  <tr>
 	    <td id="carefusion">
 	      <img id="carefusion_logo" src="img/carefusion_logo.jpg" alt="profile">
 	    </td>
 	    <td class="content">
-	      Worked on the software aspect of the CareFusion ventilator:
-	      <br> - Applied agile programming methodologies to refactor the legacy C/C++ code base, fix various bugs, and implement new features
-	      <br> - Created a new test mode to calculate the gas viscosity base on the amount of oxygen input using Lua
-	      <br> - Worked with the development tool’s code base to keep the development process running efficiently 
+	      I am a member of CareFusion's software engineering team. As an intern, I have a chance to work on different aspects of the ventilator's software as well as learning from the most experienced engineers at CareFusion. My daily task inlcudes participating in daily SCRUM meeting, adding new tests to the automated test system, and implementing new features by applying TDD and extreme programming methodology.
 	    </td>
 	  </tr>
 	  <tr>
@@ -88,9 +135,7 @@
 	      <img src="img/jpl_logo.gif" alt="profile">
 	    </td>
 	    <td class="content">
-	      Member of multi-robot control team: 
-	      <br> - Designed a GUI which displays live stream video and current location of quadrotors 
-	      <br> - Developed an object detection, obstacle avoidance and tracking algorithm.
+	      I am originally the lead intern of the multi-robot control team. I was acting as the main software engineer of the team. During the course of the internship, my main task is to work closely with our advisor in order to do independent research and come up with the techincal solution for our project. I was the sole designer of the multi-robot control GUI which allows users to communicate with the quadrotors via livestream video and GPS indicator. I also utilized the OpenCV library to enhance the quadrotors' environmental awareness. 
 	    </td>
 	  </tr>
 	</table>
@@ -99,7 +144,25 @@
       <div id="contact" class="page-header">
         <h1>Contact</h1>
       </div>
-      <p>On Construction</p>
+      <p>Download a PDF version of my resume or view my other sites.</p>
+      <div id="resume">
+	<!-- <p>Click to view or download a resume, simply click on the picture</p> -->
+	<figure>
+	  <a href="res/Brian Ngo-Resume.pdf" target="_blank"><img id="resume-pic" src="img/Brian-Resume.png" alt="Resume"/></a>
+	  <!-- <figcaption>Click on the image to view or download a PDF of my resume</figcaption> -->
+	</figure>
+	<table>
+	  <tr>
+	    <td id="linkedin"><a href="https://www.linkedin.com/pub/brian-ngo/88/553/799/"><img src="img/linkedin_logo.jpg" alt="linkedin"></td></a>
+	  </tr>
+	  <tr>
+	    <td id="github"><a href="https://github.com/BrianNgo"><img id="github" src="img/github_logo.jpg" alt="github"></td></a>
+	  </tr>
+	  <tr>
+	    <td id="email"><a href="mailto:bkngo@csupomona.com"><img src="img/email.png" alt="email"></td></a>
+	  </tr>
+	</table>
+      </div>
     </div> <!-- /container -->
 
 
